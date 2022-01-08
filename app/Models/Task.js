@@ -11,6 +11,7 @@ export class Task {
     this.quantity = data.quantity
     this.completed = data.completed || false
     this.description = data.description
+    this.load = data.load
   }
 
   get Template() {

@@ -47,6 +47,14 @@ class TaskService {
     console.log(res.data)
     ProxyState.tasks = ProxyState.tasks.filter(t => t.id !== id)
   }
+  async loadTask() {
+    const tasks = ProxyState.tasks
+    //change locally
+    task.load = !task.load
+    // save change to server
+    const res = await sandboxList.put(task.id, task)
+    ProxyState.tasks = ProxyState.tasks
+  }
 }
 
 

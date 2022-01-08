@@ -1,1 +1,8 @@
 /* BASIC STYLES HERE */
+.api-img{
+  background-image: url('https://bcw-sandbox.herokuapp.com/api/images');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}

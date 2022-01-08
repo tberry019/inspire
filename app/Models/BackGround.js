@@ -1,0 +1,11 @@
+export class BackGround {
+  constructor(data) {
+    this.url = data.url
+
+  }
+  get Template() {
+    return /*html*/ `
+    <main class=${this.url}>
+    `
+  }
+}
