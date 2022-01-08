@@ -8,7 +8,7 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Task').Task[]} */
   tasks = []
 
-  background = []
+  backGround = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

@@ -1,4 +1,5 @@
-import { backGroundService } from "../Services/BackGroundService"
+import { backGroundService } from "../Services/BackGroundService.js"
+import { ProxyState } from "../AppState.js"
 
 
 function drawBackGround() {
@@ -12,7 +13,7 @@ function drawBackGround() {
 export class BackGroundController {
   constructor() {
 
-    ProxyState.on('background', drawBackGround)
-    backGroundService.getBackGroundService()
+    ProxyState.on('backGround', drawBackGround)
+    backGroundService.getBackGroundImage()
   }
 }
