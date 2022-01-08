@@ -23,7 +23,6 @@ export class Task {
           <label for="completed">${this.description}</label>
             <i class="mdi mdi-delete mdi-10px selectable text-danger" onclick="app.taskController.deleteTask('${this.id}')"></i> 
           </div>
-
         </div>
       </div>
     </div>`
