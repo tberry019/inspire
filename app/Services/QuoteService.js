@@ -5,9 +5,9 @@ import { Quote } from "../Models/Quote.js";
 class QuoteService {
   async getQuote() {
     const res = await sandboxQuotes.get()
-    console.log('res.data')
-    ProxyState.quotes = res.data.map(q => new Quote(q))
-    console.log('Proxystate quote', ProxyState.quotes)
+    console.log('res.data', res.data)
+    ProxyState.quotes = res.data
+    // console.log('Proxystate quote', ProxyState.quotes)
   }
 }
 

@@ -3,9 +3,8 @@ import { ProxyState } from "../AppState.js"
 
 
 function drawBackGround() {
-  let template = ''
-  ProxyState.backGround.forEach(b => template += b.Template)
-  document.getElementById('background').innerHTML = template
+  let backGround = ProxyState.backGround
+  document.body.style.background = `url('${backGround}')`
 
 }
 

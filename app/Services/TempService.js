@@ -7,9 +7,9 @@ import { sandboxWeather } from "./AxiosService.js";
 class TempService {
   async getTemperature() {
     const res = await sandboxWeather.get()
-    console.log('res.data')
-    ProxyState.temperature = res.data.map(t => new Temperature(t))
-    console.log('Proxystate temperature', ProxyState.temperature)
+    // console.log('res.data', res.data)
+    ProxyState.temperature = res.data.main.temp
+    // console.log('Proxystate temperature', ProxyState.temperature)
   }
 
 }

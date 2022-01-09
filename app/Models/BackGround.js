@@ -1,6 +1,6 @@
 export class BackGround {
   constructor(data) {
-    this.url = data.url
+    this.url = data.largeImgUrl
 
   }
   get Template() {
