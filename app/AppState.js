@@ -11,6 +11,8 @@ class AppState extends EventEmitter {
   backGround = []
 
   temperature = []
+
+  quotes = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
