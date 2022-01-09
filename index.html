@@ -25,59 +25,56 @@
       </a>
     </nav>
   </header>
-  <main class="api-img">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 p-4">
-      <div class="bg-white shadow rounded">
-        <div class="p-3">
-          <p class="m-0 text-center">To Do List</p>
-          <div class="row">
-            <div class="col-12 mt-2">
-              <h6>Tasks: </h6>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-10">
-              <form onsubmit="app.taskController.addTask()">
-                <div class="form-group d-flex p-0">
-                  <input type="text" name="description" id="description" class="form-control " placeholder="Tasks...."
-                    minlength="3" maxlength="50" required>
-                  <button class="btn btn-success">+</button>
+  <main>
+    <div id="api-img">
+      <div class="container-fluid">
+        <div class="col-md-4 p-4">
+          <div class="bg-white shadow rounded">
+            <div class="p-3">
+              <p class="m-0 text-center">To Do List</p>
+              <div class="row">
+                <div class="col-12 mt-2">
+                  <h6>Tasks: </h6>
                 </div>
-              </form>
-              <div id="task"></div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <form onsubmit="app.taskController.addTask()">
+                    <div class="form-group d-flex p-0">
+                      <input type="text" name="description" id="description" class="form-control "
+                        placeholder="Tasks...." minlength="3" maxlength="50" required>
+                      <button class="btn btn-success">+</button>
+                    </div>
+                  </form>
+                  <div id="task"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row max-height">
-      <div class="col-12 d-flex flex-column h-25" id="quote">
-        <small>id: ${this.id}</small>
-        <small>content: ${this.content}</small>
-        <small>author: ${this.author}</small>
-      </div>
-    </div>
-    <div class="row max-height">
-      <div class="col-12 d-flex flex-column h-25" id="temperature">
-        <small>Coord: ${this.coord}</small>
-        <small>weather: ${this.weather}</small>
-        <small>wind: ${this.wind} </small>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 d-flex align-items-center justify-content-center">
-        <iframe class="display-items-center" scrolling="no" frameborder="yes" clocktype="html5"
-          style="border: 2px;;margin:0;padding:0;width:380px;height:80px;"
-          src="https://www.clocklink.com/html5embed.php?clock=047&timezone=MST&color=black&size=380&Title=&Message=&Target=&From=2022,1,1,0,0,0&Color=black">
-        </iframe>
-      </div>
+        <div class="col-12 d-flex centered">
+          <iframe class=" text-light " scrolling="no" frameborder="yes" clocktype="html5"
+            style="border: 2px;;margin:0;padding:0;width:380px;height:80px;"
+            src="https://www.clocklink.com/html5embed.php?clock=047&timezone=MST&color=white&size=380&Title=&Message=&Target=&From=2022,1,1,0,0,0&Color=black">
+          </iframe>
+        </div>
+        <div class="row max-height ">
+          <div class="col-12 d-flex flex-column h-25 text-light" id="quote">
+            <small>id: ${this.id}</small>
+            <small>content: ${this.content}</small>
+            <small>author: ${this.author}</small>
+          </div>
+        </div>
+
+        <div class="row max-height">
+          <div class="col-12 d-flex flex-column h-25 text-light" id="temperature">
+            <small>Coord: ${this.coord}</small>
+            <small>weather: ${this.weather}</small>
+            <small>wind: ${this.wind} </small>
+          </div>
+        </div>
+        <div class="row">
+
   </main>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
