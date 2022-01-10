@@ -3,9 +3,9 @@ export class BackGround {
     this.url = data.largeImgUrl
 
   }
-  get Template() {
-    return /*html*/ `
-    <main class=${this.url}>
-    `
-  }
+  // get Template() {
+  //   return /*html*/ `
+  //   <main class=${this.url}>
+  //   `
+  // }
 }

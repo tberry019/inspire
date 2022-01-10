@@ -33,6 +33,9 @@ class TaskService {
       task.completed = true
 
     }
+    //Need to ale Put request to API
+    //GregsList editing a car in cars servie
+
     ProxyState.tasks = ProxyState.tasks
   }
 

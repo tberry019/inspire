@@ -8,9 +8,12 @@ import { Task } from "../Models/Task.js"
 
 function _drawTask() {
   //const lists = ProxyState.lists
-  let task = ProxyState.tasks
+  let tasks = ProxyState.tasks
   let template = ''
-  task.forEach(t => template += t.Template)
+  let count = 0
+  tasks.forEach(t => template += t.Template)
+  tasks.forEach()
+  //if completed increase count by 1
   document.getElementById('task').innerHTML = template
 }
 
