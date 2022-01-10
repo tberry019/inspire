@@ -8,7 +8,7 @@ class BackGroundService {
     const res = await sandboxImages.get()
     // console.log('random image thing response from bg service', res.data.url)
     ProxyState.backGround = res.data.largeImgUrl
-    console.log('Proxystate background', ProxyState.backGround)
+    // console.log('Proxystate background', ProxyState.backGround)
 
   }
 }

@@ -14,13 +14,14 @@ function drawQuote() {
 function drawAuthor() {
   let author = ProxyState.author
   let template = ''
-  document.getElementById("author").innerHTML = `<h3>Author:${author}</h3>`
+  document.getElementById("author").innerHTML = `<h3>Author:${author.author}</h3>`
 }
 
 export class QuoteController {
   constructor() {
     // console.log('hello world from quote controller ')
     quoteService.getQuote()
+    quoteService.getAuthor()
     ProxyState.on('quotes', drawQuote)
     ProxyState.on('author', drawAuthor)
 
