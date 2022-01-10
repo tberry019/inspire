@@ -7,11 +7,11 @@ export class Task {
     this.id = data.id || generateId()
     this.title = data.title
     this.model = data.model
-    this.listItemId = data.listItemId
-    this.quantity = data.quantity
+    // this.listItemId = data.listItemId
+    // this.quantity = data.quantity
     this.completed = data.completed || false
     this.description = data.description
-    this.load = data.load
+    // this.load = data.load
   }
 
   get Template() {

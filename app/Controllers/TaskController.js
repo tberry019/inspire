@@ -20,7 +20,10 @@ function _drawTaskForm() {
 export class TaskController {
   constructor() {
     ProxyState.on('tasks', _drawTask)
+    taskService.loadTask()
+
   }
+
   createTask() {
     window.event.preventDefault()
     let form = window.event.target

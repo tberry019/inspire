@@ -50,21 +50,11 @@ class TaskService {
   async loadTask() {
     // task.load = !task.load
     // save change to server
-    const res = await sandboxList.get('')
-    ProxyState.tasks = res.data.map(newTask => new Task(newTask))
-    console.log('tasks loading', res.newTask)
+    const res = await sandboxList.get()
+    ProxyState.tasks = res.data
+
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 export const taskService = new TaskService();
