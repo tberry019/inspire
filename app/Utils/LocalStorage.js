@@ -13,7 +13,6 @@ export function loadState() {
   let data = JSON.parse(localStorage.getItem('Inspire'))
   console.log('load state data', data);
   if (data != null) {
-
     ProxyState.tasks = data.task.map(t => new Task(t))
     console.log('load state', ProxyState.tasks)
   }
