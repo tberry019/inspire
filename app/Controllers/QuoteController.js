@@ -8,13 +8,13 @@ function drawQuote() {
   let template = ''
   // quote.forEach(q => template += q.Template)
   // document.getElementById('quote').innerHTML = template
-  document.getElementById("quote").innerHTML = `<h3>Quote:${quote.content}</h3>`
+  document.getElementById("quote").innerHTML = `<h3>Quote: "${quote.content}"</h3>`
 }
 
 function drawAuthor() {
   let author = ProxyState.author
   let template = ''
-  document.getElementById("author").innerHTML = `<h3>Author:${author.author}</h3>`
+  document.getElementById("author").innerHTML = `<h3>Author: ${author.author}</h3>`
 }
 
 export class QuoteController {
