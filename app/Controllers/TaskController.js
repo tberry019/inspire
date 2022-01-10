@@ -12,7 +12,7 @@ function _drawTask() {
   let template = ''
   let count = 0
   tasks.forEach(t => template += t.Template)
-  tasks.forEach()
+
   //if completed increase count by 1
   document.getElementById('task').innerHTML = template
 }
@@ -52,6 +52,8 @@ export class TaskController {
       console.log(error.message)
     }
   }
+
+
   async deleteTask(id) {
     try {
       if (confirm("Are you sure you want to delete this list?") == true) {

@@ -20,7 +20,7 @@ class TaskService {
     // console.log('tasks in task serv', ProxyState.tasks);
 
   }
-  checkTaskItem(id) {
+  async checkTaskItem(id) {
     const task = ProxyState.tasks.find(t => t.id == id)
     // ProxyState.tasks = task
     console.log('checking task', task)
@@ -33,10 +33,15 @@ class TaskService {
       task.completed = true
 
     }
-    //Need to ale Put request to API
+
+    const res = await sandboxList.put(task.id, task)
+    ProxyState.tasks = ProxyState.tasks
+
+
+    //Need to ale Put request to API by ID
     //GregsList editing a car in cars servie
 
-    ProxyState.tasks = ProxyState.tasks
+    // ProxyState.tasks = ProxyState.tasks
   }
 
   async addTask(newTask) {
@@ -57,6 +62,7 @@ class TaskService {
     ProxyState.tasks = res.data.map(newTask => new Task(newTask))
 
   }
+
 }
 
 
