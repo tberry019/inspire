@@ -13,6 +13,8 @@ class AppState extends EventEmitter {
   temperature = []
 
   quotes = []
+
+  author = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

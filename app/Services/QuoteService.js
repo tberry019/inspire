@@ -8,7 +8,17 @@ class QuoteService {
     console.log('res.data', res.data)
     ProxyState.quotes = res.data
     // console.log('Proxystate quote', ProxyState.quotes)
+
+  }
+  async getAuthor() {
+    const res = await sandboxQuotes.get()
+
+
+    ProxyState.author = res.data
+    console.log('res.data', author)
   }
 }
+
+
 
 export const quoteService = new QuoteService();
