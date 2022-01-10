@@ -14,7 +14,7 @@ function drawQuote() {
 function drawAuthor() {
   let author = ProxyState.author
   let template = ''
-  document.getElementById("author").innerHTML = `<h3>Author: ${author.author}</h3>`
+  document.getElementById("author").innerHTML = `<h5>Author: ${author.author}</h5>`
 }
 
 export class QuoteController {
