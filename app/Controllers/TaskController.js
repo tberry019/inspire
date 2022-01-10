@@ -24,14 +24,6 @@ export class TaskController {
 
   }
 
-  createTask() {
-    window.event.preventDefault()
-    let form = window.event.target
-    const newTask = {
-      title: form.title.value,
-    }
-    taskService.createTask(newTask)
-  }
   drawTaskForm() {
     _drawTaskForm()
   }
@@ -50,7 +42,7 @@ export class TaskController {
       const newTask = {
         description: form.description.value
       }
-      console.log('new task obj', newTask)
+      // console.log('new task obj', newTask)
       await taskService.addTask(newTask)
       form.reset()
     } catch (error) {
@@ -67,12 +59,6 @@ export class TaskController {
       console.error(error.message)
     }
   }
-  async loadTasks() {
-    try {
-      await taskService.loadTask()
-    } catch (error) {
-      console.error(error)
-    }
-  }
+
 }
 

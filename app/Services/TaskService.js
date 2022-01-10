@@ -51,7 +51,7 @@ class TaskService {
     // task.load = !task.load
     // save change to server
     const res = await sandboxList.get()
-    ProxyState.tasks = res.data
+    ProxyState.tasks = res.data.map(newTask => new Task(newTask))
 
   }
 }
